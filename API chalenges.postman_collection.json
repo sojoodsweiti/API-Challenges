@@ -1,0 +1,1353 @@
+{
+	"info": {
+		"_postman_id": "a33f4f61-b588-473d-b480-c35bde5337b3",
+		"name": "API chalenges",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23974111"
+	},
+	"item": [
+		{
+			"name": "Getting Started",
+			"item": [
+				{
+					"name": "1- challenger",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/challenger",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"challenger"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "First Real Challenge",
+			"item": [
+				{
+					"name": "2- challenges",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-CHALLENGER",
+								"value": "40a27507-21b2-4252-8141-afe5e316094e",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/challenges",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"challenges"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "GET Challenges",
+			"item": [
+				{
+					"name": "3- todos",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-CHALLENGER",
+								"value": "40a27507-21b2-4252-8141-afe5e316094e",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/todos",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"todos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "4- todo",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-CHALLENGER",
+								"value": "40a27507-21b2-4252-8141-afe5e316094e",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/todo",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"todo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "5- todos/id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-CHALLENGER",
+								"value": "40a27507-21b2-4252-8141-afe5e316094e",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/todos/205",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"todos",
+								"205"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "6- todos/id negative",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-CHALLENGER",
+								"value": "40a27507-21b2-4252-8141-afe5e316094e",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/todos/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"todos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "HEAD Challenges",
+			"item": [
+				{
+					"name": "7- todos",
+					"request": {
+						"method": "HEAD",
+						"header": [
+							{
+								"key": "X-CHALLENGER",
+								"value": "40a27507-21b2-4252-8141-afe5e316094e",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/todos",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"todos"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Creation Challenges with POST",
+			"item": [
+				{
+					"name": "8- todos",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-CHALLENGER",
+								"value": "40a27507-21b2-4252-8141-afe5e316094e",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n            \"title\": \"create todo schedule meeting\",\r\n            \"doneStatus\": true,\r\n            \"description\": \"\"\r\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/todos",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"todos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "9- todos filter true",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-CHALLENGER",
+								"value": "40a27507-21b2-4252-8141-afe5e316094e",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/todos?doneStatus=true",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"todos"
+							],
+							"query": [
+								{
+									"key": "doneStatus",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "9- todos filter false",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-CHALLENGER",
+								"value": "40a27507-21b2-4252-8141-afe5e316094e",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/todos?doneStatus=false",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"todos"
+							],
+							"query": [
+								{
+									"key": "doneStatus",
+									"value": "false"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "10- todos fail donestatus",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-CHALLENGER",
+								"value": "40a27507-21b2-4252-8141-afe5e316094e",
+								"type": "text"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n            \"title\": \"create escalate late payments\",\r\n            \"doneStatus\": \"abc\",\r\n            \"description\": \"\"\r\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/todos",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"todos"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Update Challenges with POST",
+			"item": [
+				{
+					"name": "11- todos/id Update content",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-CHALLENGER",
+								"value": "40a27507-21b2-4252-8141-afe5e316094e",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n            \"title\": \"schedule meeting\",\r\n            \"doneStatus\": true,\r\n            \"description\": \"new update\"\r\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/todos/194",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"todos",
+								"194"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "DELETE Challenges",
+			"item": [
+				{
+					"name": "12- todos/id",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "X-CHALLENGER",
+								"value": "40a27507-21b2-4252-8141-afe5e316094e",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/todos/205",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"todos",
+								"205"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "OPTIONS Challenges",
+			"item": [
+				{
+					"name": "13- todos",
+					"request": {
+						"method": "OPTIONS",
+						"header": [
+							{
+								"key": "X-CHALLENGER",
+								"value": "40a27507-21b2-4252-8141-afe5e316094e",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/todos",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"todos"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Accept Challenges",
+			"item": [
+				{
+					"name": "14- todos XML",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-CHALLENGER",
+								"value": "40a27507-21b2-4252-8141-afe5e316094e",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/xml",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/todos",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"todos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "15- todos JSON",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-CHALLENGER",
+								"value": "40a27507-21b2-4252-8141-afe5e316094e",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/todos",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"todos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "16- todos ANY format",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-CHALLENGER",
+								"value": "40a27507-21b2-4252-8141-afe5e316094e",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/todos",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"todos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "17- todos XML pref",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-CHALLENGER",
+								"value": "40a27507-21b2-4252-8141-afe5e316094e",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/xml, application/json ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/todos",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"todos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "18- todos no Accept",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-CHALLENGER",
+								"value": "40a27507-21b2-4252-8141-afe5e316094e",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/todos",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"todos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "19- todos  406 status code",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-CHALLENGER",
+								"value": "40a27507-21b2-4252-8141-afe5e316094e",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/gzip",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/todos",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"todos"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Content-Type Challenges",
+			"item": [
+				{
+					"name": "20- todos content-type XML",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/xml",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/xml",
+								"type": "text"
+							},
+							{
+								"key": "X-CHALLENGER",
+								"value": "40a27507-21b2-4252-8141-afe5e316094e",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<todo>\r\n        <doneStatus>false</doneStatus>\r\n        <description/>\r\n        <title>new scan paperwork</title>\r\n    </todo>"
+						},
+						"url": {
+							"raw": "{{base_url}}/todos",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"todos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "21- todos content-type JSON",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "X-CHALLENGER",
+								"value": "40a27507-21b2-4252-8141-afe5e316094e",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n            \"title\": \"new process payroll\",\r\n            \"doneStatus\": true,\r\n            \"description\": \"\"\r\n        }"
+						},
+						"url": {
+							"raw": "{{base_url}}/todos",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"todos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "22- todos 415 status code Unsupported Media Type",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-CHALLENGER",
+								"value": "40a27507-21b2-4252-8141-afe5e316094e",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "bob ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n            \"title\": \"new process payroll\",\r\n            \"doneStatus\": false,\r\n            \"description\": \"\"\r\n        }",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/todos",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"todos"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Mix Accept and Content-Type Challenges",
+			"item": [
+				{
+					"name": "23- todos XML to JSON",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-CHALLENGER",
+								"value": "40a27507-21b2-4252-8141-afe5e316094e",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/xml",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " <todo>\r\n        <doneStatus>false</doneStatus>\r\n        <description/>\r\n        <title>new combination paperwork</title>\r\n    </todo>"
+						},
+						"url": {
+							"raw": "{{base_url}}/todos",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"todos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "24- todos JSON to XML",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/xml",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "X-CHALLENGER",
+								"value": "40a27507-21b2-4252-8141-afe5e316094e",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n            \"title\": \"new file paperwork\",\r\n            \"doneStatus\": false,\r\n            \"description\": \"\"\r\n        }"
+						},
+						"url": {
+							"raw": "{{base_url}}/todos",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"todos"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Status Code Challenges",
+			"item": [
+				{
+					"name": "25- heartbeat 405",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "X-CHALLENGER",
+								"value": "40a27507-21b2-4252-8141-afe5e316094e",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/heartbeat",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"heartbeat"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "26- heartbeat 500",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "X-CHALLENGER",
+								"value": "40a27507-21b2-4252-8141-afe5e316094e",
+								"type": "text"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/heartbeat",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"heartbeat"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "27- heartbeat 501",
+					"request": {
+						"method": "LINK",
+						"header": [
+							{
+								"key": "X-CHALLENGER",
+								"value": "40a27507-21b2-4252-8141-afe5e316094e",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/heartbeat",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"heartbeat"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "28- heartbeat 204",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-CHALLENGER",
+								"value": "40a27507-21b2-4252-8141-afe5e316094e",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/heartbeat",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"heartbeat"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Authentication Challenges",
+			"item": [
+				{
+					"name": "29- secret/token 401",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-CHALLENGER",
+								"value": "40a27507-21b2-4252-8141-afe5e316094e",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/secret/token",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"secret",
+								"token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "30- secret/token 201",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "password",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-CHALLENGER",
+								"value": "40a27507-21b2-4252-8141-afe5e316094e",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/secret/token",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"secret",
+								"token"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Authorization Challenges",
+			"item": [
+				{
+					"name": "31- secret/note 403 Forbidden",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-CHALLENGER",
+								"value": "40a27507-21b2-4252-8141-afe5e316094e",
+								"type": "text"
+							},
+							{
+								"key": "X-AUTH-TOKEN",
+								"value": "40a27507-21b2-4252-8141-afe5e316094e",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/secret/note",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"secret",
+								"note"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "32- secret/note 401 Unauthorized",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-CHALLENGER",
+								"value": "40a27507-21b2-4252-8141-afe5e316094e",
+								"type": "text"
+							},
+							{
+								"key": "X-AUTH-TOKEN",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/secret/note",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"secret",
+								"note"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "33- secret/note 200",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-CHALLENGER",
+								"value": "40a27507-21b2-4252-8141-afe5e316094e",
+								"type": "text"
+							},
+							{
+								"key": "X-AUTH-TOKEN",
+								"value": "f0e18120-2074-4064-bcc1-d12633101029",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/secret/note",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"secret",
+								"note"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "34- secret/note",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-CHALLENGER",
+								"value": "40a27507-21b2-4252-8141-afe5e316094e",
+								"type": "text"
+							},
+							{
+								"key": "X-AUTH-TOKEN",
+								"value": "f0e18120-2074-4064-bcc1-d12633101029",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"note\": \"My note \"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/secret/note",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"secret",
+								"note"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "35- secret/note 401",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-CHALLENGER",
+								"value": "40a27507-21b2-4252-8141-afe5e316094e",
+								"type": "text"
+							},
+							{
+								"key": "X-AUTH-TOKEN",
+								"value": "f0e18120-2074-4064-bcc1-d12633101029",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"note\": \"My note \"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/secret/note",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"secret",
+								"note"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "36- secret/note 403",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-CHALLENGER",
+								"value": "40a27507-21b2-4252-8141-afe5e316094e",
+								"type": "text"
+							},
+							{
+								"key": "X-AUTH-TOKEN",
+								"value": "f0e18120-2074-4064",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"note\": \"My note \"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/secret/note",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"secret",
+								"note"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "37- secret/note (Bearer)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "f0e18120-2074-4064-bcc1-d12633101029",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-CHALLENGER",
+								"value": "40a27507-21b2-4252-8141-afe5e316094e",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/secret/note",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"secret",
+								"note"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "38- secret/note (Bearer)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "f0e18120-2074-4064-bcc1-d12633101029",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-CHALLENGER",
+								"value": "40a27507-21b2-4252-8141-afe5e316094e",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"note\": \"My edited note \"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/secret/note",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"secret",
+								"note"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "https://apichallenges.herokuapp.com",
+			"type": "string"
+		}
+	]
+}
